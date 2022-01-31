@@ -1,0 +1,47 @@
+{
+  "project_info": {
+    "project_number": "23549411728",
+    "project_id": "final-project-course-f4a81",
+    "storage_bucket": "final-project-course-f4a81.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:23549411728:android:6dfb9243dc19e1b412f315",
+        "android_client_info": {
+          "package_name": "ru.andlancer.finalcourse"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "23549411728-822v1ir94fuu65o306v0ir9o4qr5ddqd.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "ru.andlancer.finalcourse",
+            "certificate_hash": "c17786df4d14e02ea6283dcbd627717ccb9a55e5"
+          }
+        },
+        {
+          "client_id": "23549411728-2s8i108437jp9239gvjdrv82oj5630mg.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyABax_3l7TeobtxlbRWCOo9msPBWhBoBmo"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "23549411728-2s8i108437jp9239gvjdrv82oj5630mg.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
