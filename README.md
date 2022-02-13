@@ -4,5 +4,5 @@
 
 ## Update
 
-Проект переделан под BLoc и Clean Archetecture.
+Проект переделан под BLoc и Clean Architecture.
 
