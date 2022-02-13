@@ -1,3 +1,9 @@
+<!--
+  ~ Created by Kosyachenko Roman on 13.02.2022, 22:44
+  ~ Copyright (c) 2022 . All rights reserved.
+  ~ Last modified 26.01.2022, 20:51
+  -->
+
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     package="ru.andlancer.finalcourse.final_course_app">
     <!-- Flutter needs it to communicate with the running application

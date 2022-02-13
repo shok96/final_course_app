@@ -1,22 +1,25 @@
-import 'package:final_course_app/controller/NetController.dart';
-import 'package:final_course_app/controller/pageRoutes.dart';
-import 'package:final_course_app/themes/base_theme.dart';
-import 'package:final_course_app/view/Reg.dart';
+/*
+ * Created by Kosyachenko Roman on 13.02.2022, 22:44
+ * Copyright (c) 2022 . All rights reserved.
+ * Last modified 13.02.2022, 21:09
+ */
 
-import 'package:final_course_app/view/profile.dart';
-import 'package:final_course_app/view/splash.dart';
-import 'package:final_course_app/view/to_do_list.dart';
-import 'package:final_course_app/view/user_list.dart';
-import 'package:firebase_auth/firebase_auth.dart';
+import 'package:flutter_screenutil/flutter_screenutil.dart';
+
+import "core/controller/pageRoutes.dart";
+import 'package:final_course_app/presentation/views/profile.dart';
+import 'package:final_course_app/presentation/views/splash.dart';
+import 'package:final_course_app/presentation/views/to_do_list.dart';
+import 'package:final_course_app/presentation/views/user_list.dart';
 import 'package:firebase_core/firebase_core.dart';
 import 'package:flutter/material.dart';
-
-NetController net = NetController();
+import 'core/di.dart' as di;
+import 'core/themes/base_theme.dart';
 
 Future<void> main() async {
   WidgetsFlutterBinding.ensureInitialized();
   await Firebase.initializeApp();
-
+  await di.init();
   runApp(MyApp());
 }
 
@@ -25,19 +28,20 @@ class MyApp extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return MaterialApp(
-      title: 'Flutter Pizza',
-      theme: themeData(context),
-      debugShowCheckedModeBanner: false,
-      initialRoute: pageRoutes.splash,
-      routes: {
-        pageRoutes.splash: (context) => Splash(),
-        pageRoutes.reg: (context) => Reg(),
-        pageRoutes.users: (context) => UserList(),
-        pageRoutes.todo: (context) => ToDoList(),
-        pageRoutes.profile: (context) => Profile(),
-      },
-    );
+    return ScreenUtilInit(
+        designSize: const Size(414, 896),
+        builder: () {
+          return MaterialApp(
+            title: 'Flutter Pizza',
+            theme: themeData(context),
+            debugShowCheckedModeBanner: false,
+            initialRoute: pageRoutes.splash,
+            routes: {
+              pageRoutes.splash: (context) => Splash(),
+              pageRoutes.users: (context) => UserList(),
+              pageRoutes.todo: (context) => ToDoList(),
+            },
+          );
+        });
   }
 }
-
